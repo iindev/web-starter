@@ -1,5 +1,5 @@
 {
-  "name": "Web Starter - Gulp",
+  "name": "Web-Starter-Gulp",
   "version": "1.0.0",
   "description": "A front-end starter project powered by bulp, sass and browsersync",
   "main": "gulpfile.js",
@@ -10,6 +10,10 @@
     "name": "Abdul Muktadir",
     "email": "info@iindev.com",
     "url": "http:www.iindev.com"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/iindev/web-starter-gulp.git"
   },
   "license": "MIT",
   "devDependencies": {
