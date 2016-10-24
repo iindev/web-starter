@@ -1,0 +1,26 @@
+
+
+///
+//	Function : Calculate Percent
+///═════════════════════════════════════════════════
+
+@function cp($target, $container) {
+	@return ($target / $container) * 100%;
+}
+
+
+//	Usage
+
+//	.my-module {
+//		width: cp(650px, 1000px);
+//	}
+
+//	Returns
+
+//	.my-module {
+//		width: 65%;
+//	}
+
+///═════════════════════════════════════════════════
+//	End / Mixin : Calculate Percent
+///═════════════════════════════════════════════════

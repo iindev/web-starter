@@ -1,0 +1,8 @@
+app/assets/js/lib/angular.min.js
+app/assets/js/lib/angular-route.min.js
+app/assets/js/lib/angular-animate.min.js
+app/assets/js/lib/angular-aria.min.js
+app/assets/js/lib/angular-messages.min.js
+app/assets/js/lib/angular-material.min.js
+app/assets/js/lib/hammer.min.js
+app/assets/js/lib/angular-carousel.min.js

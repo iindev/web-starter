@@ -1,0 +1,360 @@
+
+
+///
+//	Mixin : General Prefix
+///═════════════════════════════════════════════════
+
+@mixin prefix($map, $vendors: webkit moz ms) {
+	@each $prop, $val in $map {
+		@if $vendors {
+			@each $vendor in $vendors {
+				#{"-" + $vendor + "-" + $prop}: #{$val};
+			}
+		}
+		// Dump regular property anyway
+		#{$prop}: #{$val};
+	}
+}
+
+//	Usage
+
+// .element {
+//  	@include prefix((transform: translate(-50%, -50%)), webkit ms);
+// }
+
+// .other-element {
+//  	@include prefix((
+//  		column-count: 3,
+//  		column-gap: 1em,
+//  		column-rule: 1px solid silver,
+//  		column-width: 20em
+//  	), webkit moz);
+// }
+
+///═════════════════════════════════════════════════
+//	End / General Prefix
+///═════════════════════════════════════════════════
+
+
+
+///
+//	Mixin : Transform
+///═════════════════════════════════════════════════
+
+@mixin transform($val) {
+	@include prefix((transform: $val), webkit ms);
+}
+
+//	Usage
+
+// .element {
+//  	@include transform(rotate(42deg));
+// }
+
+///═════════════════════════════════════════════════
+//	End / Mixin : Transform
+///═════════════════════════════════════════════════
+
+
+
+///
+//	Mixin : Display Flex
+///═════════════════════════════════════════════════
+
+@mixin displayFlex{
+	display:-webkit-box; display:-ms-flexbox; display:-webkit-flex; display:flex;
+}
+
+// Removed display:-moz-box;
+// As this is no longer required // Old firefox considered to be obsolute
+
+//	Usage
+
+//	@include dsiplayFlex;
+
+
+///═════════════════════════════════════════════════
+//	End / Mixin : Display Flex
+///═════════════════════════════════════════════════
+
+
+///
+//	Mixin : Flex Wrap
+///═════════════════════════════════════════════════
+
+@mixin flexWrap($val){
+	@if $val == 'wrap' {
+		-webkit-box-lines:multiple;
+	}
+	@else if $val == 'nowrap' {
+		-webkit-box-lines:single;
+	}
+	@include prefix((flex-wrap: $val), ms webkit);
+}
+
+// Removed -moz-box-lines:multiple / single;
+// As this is no longer required // Old firefox considered to be obsolute
+
+//	Usage
+
+//	@include flexWrap(wrap);
+
+///═════════════════════════════════════════════════
+//	End / Mixin : Flex Wrap
+///═════════════════════════════════════════════════
+
+
+
+///
+//	Mixin : Flex Direction
+///═════════════════════════════════════════════════
+
+@mixin flexDirection($val){
+	@if $val == 'row' {
+		-webkit-box-orient:horizontal;
+		-webkit-box-direction:normal;
+	}
+	@else if $val == 'row-reverse' {
+		-webkit-box-orient:horizontal;
+		-webkit-box-direction:reverse;
+	}
+	@else if $val == 'column' {
+		-webkit-box-orient:vertical;
+		-webkit-box-direction:normal;
+	}
+	@else if $val == 'column-reverse' {
+		-webkit-box-orient:vertical;
+		-webkit-box-direction:reverse;
+	}
+	@include prefix((flex-direction: $val), ms webkit);
+}
+
+// Removed -moz-box-orient:vertical;
+// As this is no longer required // Old firefox considered to be obsolute
+
+//	Usage
+
+//	@include flexDirection(column);
+
+///═════════════════════════════════════════════════
+//	End / Mixin : Flex Direction
+///═════════════════════════════════════════════════
+
+
+
+///
+//	Mixin : Flex Container Align Items
+///═════════════════════════════════════════════════
+
+@mixin alignItems($val){
+	@if $val == 'flex-start' {
+		-webkit-box-align:start; -ms-flex-align:start;
+	}
+	@else if $val == 'flex-end' {
+		-webkit-box-align:end; -ms-flex-align:end;
+	}
+	@else {
+		-webkit-box-align:$val; -ms-flex-align:$val;
+	}
+	@include prefix((align-items: $val), webkit);
+}
+
+// Removed -moz-box-align:center;
+// As this is no longer required // Old firefox considered to be obsolute
+
+//	Usage
+
+//	@include fcAlignItems(center);
+
+///═════════════════════════════════════════════════
+//	End / Mixin : Flex Container Align Items
+///═════════════════════════════════════════════════
+
+
+
+///
+//	Mixin : Flex Container Justify Content
+///═════════════════════════════════════════════════
+
+@mixin justifyContent($val){
+	@if $val == 'flex-start' {
+		-webkit-box-pack:start; -ms-flex-pack:start;
+	}
+	@else if $val == 'flex-end' {
+		-webkit-box-pack:end; -ms-flex-pack:end;
+	}
+	@else if $val == 'space-between' {
+		-webkit-box-pack:justify; -ms-flex-pack:justify;
+	}
+	@else if $val == 'space-around' {
+		// -webkit-box-pack:justify; -ms-flex-pack:justify;
+	}
+	@else {
+		-webkit-box-pack:$val; -ms-flex-pack:$val;
+	}
+	@include prefix((justify-content: $val), webkit);
+}
+
+// Removed -moz-box-pack:justify;
+// As this is no longer required // Old firefox considered to be obsolute
+
+//	Usage
+
+//	@include fcJustifyContent(center);
+
+///═════════════════════════════════════════════════
+//	End / Mixin : Flex Container Justify Content
+///═════════════════════════════════════════════════
+
+
+
+
+///
+//	Mixin : Flex Child - Flex
+///═════════════════════════════════════════════════
+
+@mixin flex($val){
+	@if length($val) == 1 {
+		@if $val == 'none' {
+			-webkit-box-flex:0;
+		}
+		@else{
+			-webkit-box-flex:$val;
+		}
+	}
+	@include prefix((flex: $val), ms webkit);
+}
+
+// Removed -moz-box-flex:0;
+// As this is no longer required // Old firefox considered to be obsolute
+
+//	Usage
+
+//	@include flex(0 0 100%);
+
+///═════════════════════════════════════════════════
+//	End / Mixin : Flex Child - Flex
+///═════════════════════════════════════════════════
+
+
+
+
+///
+//	Mixin : Flex Child - Oder
+///═════════════════════════════════════════════════
+
+@mixin order($val){
+	-webkit-ordinal-group:$val; -ms-flex-order:$val; -webkit-order:$val; order:$val;
+}
+
+// Removed -moz-box-ordinal-group:1;
+// As this is no longer required // Old firefox considered to be obsolute
+
+//	Usage
+
+//	@include order(1);
+
+///═════════════════════════════════════════════════
+//	End / Mixin : Flex Child - Order
+///═════════════════════════════════════════════════
+
+
+
+
+///
+//	Mixin : Input Placeholder
+///═════════════════════════════════════════════════
+
+@mixin optional-at-root($sel) {
+	@at-root #{if(not &, $sel, selector-append(&, $sel))} { @content; }
+}
+
+@mixin placeholder {
+	@include optional-at-root('::-webkit-input-placeholder') { @content; }
+	@include optional-at-root(':-moz-placeholder') { @content; opacity:1; }		// FF 18-
+	@include optional-at-root('::-moz-placeholder') { @content; opacity:1; }		// FF 19+
+	@include optional-at-root(':-ms-input-placeholder') { @content; }
+}
+
+//	Usage
+
+// @include placeholder {
+//   color: red;
+// }
+
+// .foo {
+//   @include placeholder {
+//     color: green;
+//   }
+// }
+
+
+///═════════════════════════════════════════════════
+//	End / Mixin : Input Placeholder
+///═════════════════════════════════════════════════
+
+
+
+
+///
+//	Mixin : hollow!
+///═════════════════════════════════════════════════
+
+@mixin hollow{
+	position:absolute; left:-999999px; opacity:0; visibility:hidden;
+}
+
+///═════════════════════════════════════════════════
+//	End / Mixin : hollow
+///═════════════════════════════════════════════════
+
+
+
+
+///
+//	Mixin : CSS Triangle
+///═════════════════════════════════════════════════
+
+@mixin triangle($direction, $width, $height, $clr: #ccc){
+	width: 0; height: 0;
+	border-style: solid;
+	@if $direction == 'up'{
+		border-width: 0 $width/2 $height $width/2;
+		border-color: transparent transparent $clr transparent;
+	}
+	@else if $direction == 'down' {
+		border-width: $height $width/2 0 $width/2;
+		border-color: $clr transparent transparent transparent;
+	}
+	@else if $direction == 'left' {
+		border-width: $height/2 $width $height/2 0;
+		border-color: transparent $clr transparent transparent;
+	}
+	@else if $direction == 'right' {
+		border-width: $height/2 0 $height/2 $width;
+		border-color: transparent transparent transparent $clr;
+	}
+}
+
+// Usage
+
+// @include triangle(up, 86px, 6px, $clrStandOut);
+// @include triangle(down, 86px, 6px, $clrStandOut);
+// @include triangle(left, 86px, 6px, $clrStandOut);
+// @include triangle(right, 86px, 6px, $clrStandOut);
+
+///═════════════════════════════════════════════════
+//	End / Mixin : CSS Triangle
+///═════════════════════════════════════════════════
+
+
+
+
+///
+//	Mixin
+///═════════════════════════════════════════════════
+
+
+///═════════════════════════════════════════════════
+//	End / Mixin
+///═════════════════════════════════════════════════

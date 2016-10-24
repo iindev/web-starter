@@ -1,0 +1,90 @@
+
+
+//	SASS Project Architecture
+//━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+//	sass/
+//	|
+//	|
+//	|	 partials/base/
+//	|	|	 _variables.scss   # Sass Variables
+//	|	|	 _functions.scss   # Sass Functions
+//	|	|	 _mixins.scss      # Sass Mixins
+//	|	|	 _init.scss        # Reset/normalize
+//	|	|	 _typography.scss  # Typography rules etc..
+//	|
+//	|	 partials/vendors/
+//	|	|	 _bootstrap.scss   # Bootstrap
+//	|	|	 _jquery-ui.scss   # jQuery UI etc..
+//	|
+//	|	 partials/themes/
+//	|	|	 _theme.scss       # Default theme
+//	|	|	 _admin.scss       # Admin theme etc..
+//	|
+//	|	 partials/layoutAndComonents/
+//	|	|	 _global.scss      # Commonly Used Elements
+//	|	|	 _grid.scss        # Grid system
+//	|	|	 _header.scss      # Header
+//	|	|	 _footer.scss      # Footer
+//	|	|	 _navigation.scss  # Navigation
+//	|	|	 _carousel.scss    # Carousel
+//	|	|	 _sidebar.scss     # Sidebar
+//	|	|	 _forms.scss       # Forms etc..
+//	|
+//	|	 partials/pages/
+//	|	|	 _home.scss        # Home specific styles
+//	|	|	 _contact.scss     # Contact specific styles etc..
+//	|
+//	|	 partials/bottomstack/
+//	|	|	 _bottomcmp.scss   # Components at very bottom of the stylesheet
+//	|	|	 _animations.scss  # Animations Styles.
+//	|
+//	|	 partials/print/
+//	|	|	 _print.scss       # Print media styles
+//	|
+//	|
+//		 styles.scss           # primary Sass file
+
+
+
+//	BASE - Base Variable file along with starting point Mixins and Placeholders and Resets
+//═════════════════════════════════════════════════════════════════════════════
+@import 'partials/base/variables';
+@import 'partials/base/functions';
+@import 'partials/base/mixins';
+@import 'partials/base/init';
+
+
+//	Vendor Specific Styles
+//═════════════════════════════════════════════════════════════════════════════
+//  @import "partials/vendors/ngmaterialcustom";
+//	@import 'partials/vendors/bootstrap';
+
+
+//	Themes
+//═════════════════════════════════════════════════════════════════════════════
+//	@import 'partials/themes/theme';
+//	@import 'partials/themes/admin';
+
+
+//	FRAMEWORK - Structure and layout files.
+//═════════════════════════════════════════════════════════════════════════════
+@import 'partials/layoutAndComonents/global';
+// @import 'partials/layoutAndComonents/header';
+// @import 'partials/layoutAndComonents/footer';
+// @import 'partials/layoutAndComonents/navigation';
+
+
+//	Pages - Pages or Templates
+//═════════════════════════════════════════════════════════════════════════════
+@import 'partials/pages/home';
+
+
+//	Components to put at very bottom of the stylesheet
+//═════════════════════════════════════════════════════════════════════════════
+
+
+//	Print media styles
+//═════════════════════════════════════════════════════════════════════════════
+@import 'partials/print/print';

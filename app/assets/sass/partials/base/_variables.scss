@@ -1,0 +1,72 @@
+
+///
+//	Media breakpoints
+///==================================
+
+// width < 600px
+$xs:		"screen and ( max-width: 599px )";
+
+// width >= 600px
+$gt_xs:	"screen and ( min-width: 600px )";
+
+// 600px <= width < 960px
+$sm:		"screen and ( min-width: 600px ) and ( max-width: 959px )";
+
+// width < 960px
+$lt_sm:	"screen and ( max-width: 959px )";
+
+// width >= 960px
+$gt_sm:	"screen and ( min-width: 960px )";
+
+// 960px <= width < 1280px
+$md:		"screen and ( min-width: 960px ) and ( max-width: 1279px )";
+
+// width >= 1280px
+$gt_md:  "screen and ( min-width: 1280px )";
+
+// 1280px <= width < 1920px
+$lg:    "screen and ( min-width: 1280px ) and ( max-width: 1919px )";
+
+// width >= 1920px
+$gt_lg:  "screen and ( min-width: 1920px )";
+
+
+//	Usage
+// @media #{$gt_sm}{
+//  	.header{width:100%}
+//  	.footer{width:50%;}
+// }
+
+// .container{
+//  	@media #{$sm}{width:70%;}
+// }
+
+
+
+//	Default Variables
+
+$tnsDefault: ".15s ease";
+
+$fzBase: 16px;
+$ff1: "'gilroylight', sans-serif";
+$ff2: "'gilroyextrabold', sans-serif";
+
+
+$clr1: #1da2ff;
+$clr2: #273559;
+$clr3: #57668d;
+$clr4: #fff;
+
+$clrDefault: #000;
+$clrBg1: $clr4;
+$clrErr: #e74c3c;
+
+
+// Input Glow On Focus
+$enableInputGlow: true;
+$clrInputGlow: #525d7a;
+$clrInpCopy: $clr3;
+
+
+// Widths
+$wEncaseMax: 1200px;
