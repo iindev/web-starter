@@ -5,7 +5,8 @@ Web Starter - Gulp, Sass, Browsersync.
 > HTML/CSS starter template powered by [Gulp](http://gulpjs.com/),
 > [Sass](http://sass-lang.com/) and [Browsersync](https://www.browsersync.io/)
 
-<br><br>
+<br>
+
 Features | Tools Used
 ------ | -----
 **CSS** | [Sass](http://sass-lang.com/) ( [Libsass](http://sass-lang.com/libsass) ), [Autoprefixer](https://github.com/postcss/autoprefixer), [CSSNano](https://github.com/ben-eb/cssnano), Source Maps
