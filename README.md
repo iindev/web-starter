@@ -17,7 +17,7 @@ Dev Areas | Used Tools
 **Production Build** | JS and CSS are [uglified](https://github.com/terinjokes/gulp-uglify), [minified](http://cssnano.co/) and concatenated with [useref](https://www.npmjs.com/package/gulp-useref)
 
 
-## Preparing the environment
+### Preparing the environment
 
 Make sure Node and Gulp installed.
 
