@@ -7,7 +7,7 @@ Web Starter - Gulp, Sass, Browsersync.
 
 <br>
 
-Features | Tools Used
+Dev Areas | Used Tools
 ------ | -----
 **CSS** | [Sass](http://sass-lang.com/) ( [Libsass](http://sass-lang.com/libsass) ), [Autoprefixer](https://github.com/postcss/autoprefixer), [CSSNano](https://github.com/ben-eb/cssnano), Source Maps
 **HTML** | Barebone Responsive HTML5 Template.
