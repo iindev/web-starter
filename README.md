@@ -59,7 +59,7 @@ Please run `gulp build` or `gulp build-production` only after completing the reg
 web-starter-gulp
 |- app/
 |   |- assets/
-|   |   |- css/                                // Compiled CSS
+|   |   |- css/           // Compiled CSS
 |   |   |- fonts/
 |   |   |- images/
 |   |   |- js/
@@ -83,7 +83,7 @@ web-starter-gulp
 |   |   |   |   |   |- _home.scss
 |   |   |   |   |- print/
 |   |   |   |   |   |- _print.scss
-|   |   |   |- styles.scss                    // This is compiled. Create new ones if you need more.
+|   |   |   |- styles.scss            // This is compiled. Create new ones if you need more.
 |   |- index.html
 |- dist/
 |    |- ...
