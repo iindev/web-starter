@@ -57,39 +57,40 @@ Please run `gulp build` or `gulp build-production` only after completing the reg
 ### Directory Structure
 ```bash
 web-starter-gulp
-|- app/
-|   |- assets/
-|   |   |- css/           // Compiled CSS
-|   |   |- fonts/
-|   |   |- images/
-|   |   |- js/
-|   |   |- sass/
-|   |   |   |- partials/
-|   |   |   |   |- base/
-|   |   |   |   |   |- _variables.scss      // Variables for media queries and others
-|   |   |   |   |   |- _functions.scss
-|   |   |   |   |   |- _mixins.scss         // A healthy collection of mixins
-|   |   |   |   |   |- _init.scss           // CSS Reset
-|   |   |   |   |- vendors/
-|   |   |   |   |   |- ...
-|   |   |   |   |- themes/
-|   |   |   |   |   |- ...
-|   |   |   |   |- layoutAndComponents/
-|   |   |   |   |   |- _global.scss
-|   |   |   |   |   |- _header.scss
-|   |   |   |   |   |- _footer.scss
-|   |   |   |   |   |- _navigation.scss
-|   |   |   |   |- pages/
-|   |   |   |   |   |- _home.scss
-|   |   |   |   |- print/
-|   |   |   |   |   |- _print.scss
-|   |   |   |- styles.scss            // This is compiled. Create new ones if you need more.
-|   |- index.html
-|- dist/
-|   |- ...
+├─ app/
+│   ├─ assets/
+│   │   ├─ css/           // Compiled CSS
+│   │   ├─ fonts/
+│   │   ├─ images/
+│   │   ├─ js/
+│   │   ├─ sass/
+│   │   │   ├─ partials/
+│   │   │   │   ├─ base/
+│   │   │   │   │   ├─ _variables.scss      // Variables for media queries and others
+│   │   │   │   │   ├─ _functions.scss
+│   │   │   │   │   ├─ _mixins.scss         // A healthy collection of mixins
+│   │   │   │   │   ├─ _init.scss           // CSS Reset
+│   │   │   │   ├─ vendors/
+│   │   │   │   │   ├─ ...
+│   │   │   │   ├─ themes/
+│   │   │   │   │   ├─ ...
+│   │   │   │   ├─ layoutAndComponents/
+│   │   │   │   │   ├─ _global.scss
+│   │   │   │   │   ├─ _header.scss
+│   │   │   │   │   ├─ _footer.scss
+│   │   │   │   │   ├─ _navigation.scss
+│   │   │   │   ├─ pages/
+│   │   │   │   │   ├─ _home.scss
+│   │   │   │   ├─ print/
+│   │   │   │   │   ├─ _print.scss
+│   │   │   ├─ styles.scss            // This is compiled. Create new ones if you need more.
+│   ├─ index.html
+├─ dist/
+│   ├─ ...
 ```
 
 
+<br>
 
 ***
-Visit [iindev](http://www.iindev.com)
+[iindev](http://www.iindev.com)
