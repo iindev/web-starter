@@ -86,7 +86,7 @@ web-starter-gulp
 |   |   |   |- styles.scss            // This is compiled. Create new ones if you need more.
 |   |- index.html
 |- dist/
-|    |- ...
+|   |- ...
 ```
 
 
