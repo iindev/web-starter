@@ -55,7 +55,7 @@ gulp build-production
 Please run `gulp build` or `gulp build-production` only after completing the regular development and testing through `gulp`
 
 ### Directory Structure
-```bash
+```
 web-starter-gulp
 ├─ app/
 │   ├─ assets/
