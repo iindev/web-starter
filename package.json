@@ -1,6 +1,6 @@
 {
   "name": "Web-Starter-Gulp",
-  "version": "1.0.1",
+  "version": "1.2.0",
   "description": "A front-end starter project powered by bulp, sass and browsersync",
   "main": "gulpfile.js",
   "scripts": {

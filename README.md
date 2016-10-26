@@ -53,5 +53,43 @@ gulp build-production
 
 ### Note
 Please run `gulp build` or `gulp build-production` only after completing the regular development and testing through `gulp`
+
+### Directory Structure
+```bash
+web-starter-gulp
+|- app/
+|   |- assets/
+|   |   |- css/                                // Compiled CSS
+|   |   |- fonts/
+|   |   |- images/
+|   |   |- js/
+|   |   |- sass/
+|   |   |   |- partials/
+|   |   |   |   |- base/
+|   |   |   |   |   |- _variables.scss      // Variables for media queries and others
+|   |   |   |   |   |- _functions.scss
+|   |   |   |   |   |- _mixins.scss         // A healthy collection of mixins
+|   |   |   |   |   |- _init.scss           // CSS Reset
+|   |   |   |   |- vendors/
+|   |   |   |   |   |- ...
+|   |   |   |   |- themes/
+|   |   |   |   |   |- ...
+|   |   |   |   |- layoutAndComponents/
+|   |   |   |   |   |- _global.scss
+|   |   |   |   |   |- _header.scss
+|   |   |   |   |   |- _footer.scss
+|   |   |   |   |   |- _navigation.scss
+|   |   |   |   |- pages/
+|   |   |   |   |   |- _home.scss
+|   |   |   |   |- print/
+|   |   |   |   |   |- _print.scss
+|   |   |   |- styles.scss                    // This is compiled. Create new ones if you need more.
+|   |- index.html
+|- dist/
+|    |- ...
+```
+
+
+
 ***
 Visit [iindev](http://www.iindev.com)

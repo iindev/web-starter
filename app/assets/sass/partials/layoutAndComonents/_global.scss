@@ -3,3 +3,10 @@
 	Common Elements
 ================================================
 */
+html{
+  font:400 #{$fz-default} #{$ff-default};
+}
+
+body{
+  color: $clr-default;
+}

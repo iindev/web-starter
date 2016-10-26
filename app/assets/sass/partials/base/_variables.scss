@@ -12,9 +12,6 @@ $gt_xs:	"screen and ( min-width: 600px )";
 // 600px <= width < 960px
 $sm:		"screen and ( min-width: 600px ) and ( max-width: 959px )";
 
-// width < 960px
-$lt_sm:	"screen and ( max-width: 959px )";
-
 // width >= 960px
 $gt_sm:	"screen and ( min-width: 960px )";
 
@@ -45,28 +42,29 @@ $gt_lg:  "screen and ( min-width: 1920px )";
 
 //	Default Variables
 
-$tnsDefault: ".15s ease";
-
-$fzBase: 16px;
-$ff1: "'gilroylight', sans-serif";
-$ff2: "'gilroyextrabold', sans-serif";
 
 
-$clr1: #1da2ff;
-$clr2: #273559;
-$clr3: #57668d;
-$clr4: #fff;
 
-$clrDefault: #000;
-$clrBg1: $clr4;
-$clrErr: #e74c3c;
+// colors
+
+$clr-default: #000;
+$clr-grey: #ccc;
 
 
-// Input Glow On Focus
-$enableInputGlow: true;
-$clrInputGlow: #525d7a;
-$clrInpCopy: $clr3;
+// Fonts
+
+$ff-default: '"Lucida Sans Unicode", "Lucida Grande", sans-serif';
 
 
-// Widths
-$wEncaseMax: 1200px;
+// Font size
+
+$fz-default: 16px;
+
+
+// Paddings
+
+$pd-default: 10px;
+
+
+// Margins
+$mg-default: 10px;
